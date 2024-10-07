@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from transformers import TrainingArguments as TA
 from trl import SFTTrainer, DataCollatorForCompletionOnlyLM
 from pathlib import Path
-from loaders import load_model, load_tokenizer, load_data, load_logging
+from ..utils.loaders import load_model, load_tokenizer, load_data, load_logging
 
 load_dotenv()
 data_repo = os.environ["DATA_REPO"]

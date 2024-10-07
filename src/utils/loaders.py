@@ -27,9 +27,9 @@ def load_tokenizer(model_name: str) -> PreTrainedTokenizerBase:
     return tokenizer
 
 
-def load_data(repo_name: str, data_files: str, is_public: bool):
+def load_data(repo_name: str, data_files: str | None, is_public: bool, split_name: str = "train"):
     if is_public:
-        dataset = load_dataset(repo_name, split="train")
+        dataset = load_dataset(repo_name, split=split_name)
     else:
         dataset = load_dataset(repo_name, token=True, data_files=data_files)
     return dataset
