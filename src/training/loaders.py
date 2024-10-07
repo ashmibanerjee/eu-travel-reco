@@ -1,4 +1,3 @@
-from datasets import DatasetDict
 from transformers import (
     PreTrainedModel,
     PreTrainedTokenizerBase,
